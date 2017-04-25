@@ -1,0 +1,5 @@
+---
+- hosts: gitservers
+  gather_facts: False
+  roles:
+    - gitservers

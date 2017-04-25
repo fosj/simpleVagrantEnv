@@ -1,0 +1,6 @@
+---
+- name: create dateRepo
+  shell: "git init --bare"
+  args:
+    chdir: /src/git/dataRepo
+  become: true

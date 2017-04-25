@@ -1,0 +1,12 @@
+---
+- name: Ensure Zfs is installed
+  apt:
+    name: zfs
+    state: present
+  become: true
+
+- name: Enzure Btrfs is installed
+  apt:
+    name: btrfs-tools
+    state: present
+  become: true

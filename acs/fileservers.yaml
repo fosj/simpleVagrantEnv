@@ -1,0 +1,5 @@
+---
+- hosts: fileservers
+  gather_facts: False
+  roles:
+    - fileservers

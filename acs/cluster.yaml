@@ -1,0 +1,6 @@
+---
+- hosts: fileservers:gitservers
+  gather_facts: no
+
+- include: fileservers.yaml
+- include: gitservers.yaml

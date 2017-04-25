@@ -1,0 +1,29 @@
+---
+- name: Ensure Git is installed
+  apt:
+    name: git
+    state: present
+  become: true
+
+- name: Add the git user
+  user:
+    name: git
+    generate_ssh_key: yes
+  become: true
+
+- name: Create git serve directory
+  file:
+    path: /src/git
+    owner: git
+    state: directory
+  become: true
+
+- name: Add dataRepo directory
+  # become_user: git
+  become: true
+  file:
+    path: /src/git/dataRepo
+    owner: git
+    state: directory
+  notify:
+    - create dateRepo
